@@ -7,8 +7,6 @@ import MultiSelectDropdown from "./multiselect-dropdown";
 import Iconify from "../iconify";
 import { Slider } from "../shadcn/slider";
 import { useSettingsContext } from "@/contexts/settings";
-import useWindowSize from "@/hooks/useWindowSize";
-import { useAuth } from "@/hooks/useAuth";
 
 export default function SettingsDialog() {
   const {
@@ -21,12 +19,7 @@ export default function SettingsDialog() {
     maxImageWidth,
     onUpdateField,
     onReset,
-    onUpdate,
   } = useSettingsContext();
-
-  const { width: windowWidth } = useWindowSize();
-
-  const { user } = useAuth();
 
   const handleBackdropClick = useCallback(
     (e: MouseEvent) => {

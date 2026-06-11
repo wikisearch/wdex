@@ -16,6 +16,7 @@ module.exports = [
       "node_modules/**/*",
       ".next/**/*",
       "eslint.config.js",
+      "public/sw.js",
       ...(_eslintPluginPrettierRecommended.ignores || []),
     ],
     rules: {

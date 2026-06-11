@@ -6,7 +6,7 @@ function chunkArray(array, size) {
   return chunks;
 }
 
-function process(source, ids) {
+function _process(source, ids) {
   const chunks = chunkArray(ids, 100);
   alert(
     `Bạn có ${ids.length} truyện cần đồng bộ, mất ${chunks.length} lần mở cửa số mới. Chú ý cho phép mở cửa số/pop up mới.`,

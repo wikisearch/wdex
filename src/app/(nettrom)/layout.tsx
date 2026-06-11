@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { Inter } from "next/font/google";
 import { Constants } from "@/constants";
 import { LayoutWrapper } from "@/components/LayoutWrapper";
 import { Metadata } from "next";
@@ -36,8 +35,6 @@ export const metadata: Metadata = {
         }
       : undefined,
 };
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function NettromLayout({
   children,

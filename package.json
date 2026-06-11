@@ -3,6 +3,9 @@
   "packageManager": "yarn@4.5.1",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20"
+  },
   "scripts": {
     "dev": "next dev",
     "devfast": "next dev --turbo",

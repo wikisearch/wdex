@@ -26,6 +26,28 @@ module.exports = async (phase) => {
     eslint: {
       ignoreDuringBuilds: true,
     },
+    webpack: (config, { buildId, dev, isServer, defaultLoaders, nextRuntime, webpack }) => {
+      // Custom Webpack config here
+      // Example: Add aliases
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        '@': require('path').resolve(__dirname, 'src'),
+      };
+
+      // Example: Custom loader
+      // config.module.rules.push({
+      //   test: /\.svg$/,
+      //   use: ['@svgr/webpack'],
+      // });
+
+      // Example: Bundle analyzer (uncomment to use)
+      // if (process.env.ANALYZE === 'true') {
+      //   const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
+      //   config.plugins.push(new BundleAnalyzerPlugin());
+      // }
+
+      return config;
+    },
   };
 
   // You may want to use a more robust revision to cache
